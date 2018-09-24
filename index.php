@@ -1,4 +1,3 @@
-
 <?php
 require_once 'db/funcionesPhp.php';
 ?>
@@ -11,25 +10,12 @@ require_once 'db/funcionesPhp.php';
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<head>
+<link rel="stylesheet" type="text/css" href="menu.css">
+</head> 
 
-<style>
-    #boton00
-    {
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 30px 30px;
-        text-align: center;
-        text-decoration-line: underline;
-        text-decoration-style: double;
-        display: inline-block;
-        font-size: 16px;
-        margin: 40px 40px 160px 40px;
-        cursor: pointer;
-    }
-</style>
 <!--BANNER-->
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="background-image: url('<?php selecionarImagen('127.0.0.1','root','','cdev','PHP');?>')">
   <h1>Manuel Ferrer García </h1>
 
   <div class="container">
@@ -38,39 +24,72 @@ require_once 'db/funcionesPhp.php';
   <p>Programador multiplataforma</p>
 </div>
 <!--BANNER-->
-<div>
+<div class ="cajaprincipal" id="Fondototal">
     <div class="row">
     <!--Banner Lateral-->
-        <div class="Banner Lateral col-lg-4">
+        <div class="Banner Lateral col-lg-4" id="fondobotones" >
 
             <div class="col-lg-6">
-            <button type="button" class="btn-group-vertica" id= "boton00"><i class="fas fa-gamepad">Videojuegos</i></button>
+            <button type="button" class="btn-group-vertica"  id= "boton00" onclick="inicio('videojuegos.php')"><i class="fas fa-gamepad">Videojuegos</i></button>
             </div>
             <div class="col-lg-6">
-            <button type="button" class="btn-group-vertica" id= "boton00"> <i class="fas fa-mobile-alt">Aplicaciones</i></button>
+            <button type="button" class="btn-group-vertica" id= "boton00" onclick="inicio('aplicaciones.php')"> <i class="fas fa-mobile-alt">Aplicaciones</i></button>
+            </div>
+            <div class="col-lg-6">
+            <button type="button" class="btn-group-vertica"  id= "boton00" onclick="inicio('paginasweb.php')"><i class="fas fa-desktop">Paginas Web</i></button>
+            </div>
+            <div class="col-lg-6">
+            <button type="button" class="btn-group-vertica"  id= "boton00" onclick="inicio('otros.php')"> <i class="fas fa-random"> Otras Disciplinas</i></button>
             </div>
 
-            <div class="col-lg-6">
-            <button type="button" class="btn-group-vertica" id= "boton00">Primary</button>
-            </div>
-
-            <div class="col-lg-6">
-            <button type="button" class=" btn-group-vertica" id= "boton00">Primary</button>
-            </div>
+            
         </div>
+
+
         <!--Banner Lateral-->
         <!--Caja de Videos-->
-             <div class="Banner Lateral col-lg-8">
-             <video width="620" height="412" controls>
-                <source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-                Your browser does not support the video tag.
+             <div class="col-lg-4" id=fondovideo  >
+             <video width="512" height="512" controls>
+             <source src="recursos/video/Trailer_02.mp4" type="video/mp4">
+               
              </video>
+            </div>
   
         <!--Caja de Videos-->
+        <!--Caja de texto-->
+        <div class="col-lg-4" id=fondotexto >
+            <h1 class = "col-lg-12" id=titulotexto>Titulo</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <ul>
+            <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </li>
+            </ul>
+        </div>
+
+        <!--Caja de texto-->
            
                     
     </div>
 </div>
 
+
+<script language="javascript">
+
+function inicio(direccion){
+window.location.href=direccion;
+}
+</script> 
 
